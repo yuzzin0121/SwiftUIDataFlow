@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIDataFlowApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MyRandomImageView()
         }
     }
 }
