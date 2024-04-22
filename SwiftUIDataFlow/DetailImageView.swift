@@ -17,10 +17,14 @@ struct DetailImageView: View {
     }
     
     var body: some View {
-        VStack {
-            AsyncImage(url: url)
-                .frame(width: 150, height: 200)
+        VStack(alignment: .center) {
+            AsyncImage(url: url) { image in
+                image.image?.resizable()
+            }
+            .frame(width: 150, height: 200)
             TextField("", text: $content)
+                .frame(width: 200)
+                
         }
     }
 }
